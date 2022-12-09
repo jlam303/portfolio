@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    margin: 0%;
+    padding: 0%;
+}
+#name{
+    text-align: center;
+    position: sticky;
+    top: 0%;
+    animation-name: title;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes title{
+    0% {color: lightgreen;}
+    25% {color: lightseagreen;}
+    50% {color: lightgreen;}
+    75% {color: lightskyblue;}
+    100% {color: lightblue;}
+}
