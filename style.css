@@ -10,9 +10,11 @@ body{
     font-size: 5vmin;
 }
 .links{
-    border: solid brown .5vmin;
-    padding: 4vmin;
-    font-size: 2vmin;
+    font-size: 3vmin;
+    padding: 4.5vmin 1.5vmin 4.5vmin 1.5vmin;
+}
+#about{
+    padding: 2.8vmin 2.5vmin 2.8vmin 2.5vmin;
 }
 #box1{
     animation-delay: -4s;
@@ -22,6 +24,9 @@ body{
 }
 
 .boxes{
+    border: brown solid 1vmin;
+    height: 12vmin;
+    width: 12vmin;
     position: absolute;
     animation-name: boxes;
     animation-duration: 6s;
@@ -29,6 +34,9 @@ body{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     top: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 @keyframes boxes{
     0% {left: 10%;}
