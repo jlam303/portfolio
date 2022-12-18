@@ -2,7 +2,8 @@ body{
     margin: 0%;
     padding: 0%;
     overflow: hidden;
-    background-color: black;
+    background-image: url(./images/Tile.png);
+    background-size: 8vmin;
 }
 #name{
     text-align: center;
@@ -10,12 +11,14 @@ body{
     top: 0%;
     font-size: 5vmin;
     color: springgreen;
+    font-family: Pixel;
 }
 .links{
-    font-size: 3vmin;
+    font-size: 2.3vmin;
     padding: 4.5vmin 1.5vmin 4.5vmin 1.5vmin;
     text-decoration: none;
     color: springgreen;
+    font-family: Pixel;
 }
 #about{
     padding: 2.8vmin 2.5vmin 2.8vmin 2.5vmin;
@@ -26,11 +29,26 @@ body{
 #box2 {
     animation-delay: -2s;
 }
+#leverB{
+    border: none;
+    background: none;
+    position: absolute;
+    top: calc(100% - 20vmin);
+    left: 5vw;
+}
+#leverB:hover{
+    cursor: pointer;
+}
 
+#lever{
+    height: 20vmin;
+    width: 20vmin;
+}
 .boxes{
-    border: seagreen solid 1vmin;
-    height: 12vmin;
-    width: 12vmin;
+    background-image: url(./images/Box.png);
+    background-size: 14vmin;
+    height: 14vmin;
+    width: 14vmin;
     position: absolute;
     animation-name: boxes;
     animation-duration: 6s;
@@ -42,7 +60,7 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-#belt > img{
+#belt > div{
     position: absolute;
     z-index: -1;
 }
@@ -51,33 +69,48 @@ body{
     left: calc(10% - 2vmin);
     width: 18vmin;
     height: calc(50% - 2vmin);
-    object-fit: cover;
-    object-position: center;
+    background-image: url("./images/ConveyorD.gif");
+    background-size: 19vmin;
 }
 #rightBelt {
     top: calc(50% - 2vmin);
     left: calc(10% - 2vmin);
     width: 65%;
     height: 18vmin;
-    object-fit: cover;
-    object-position: center;
+    background-image: url("./images/Conveyor.gif");
+    background-size: 19vmin;
 }
 #downBelt2 {
     top: calc(50% - 2vmin);
     left: calc(75% - 2vmin);
     width: 18vmin;
     height: calc(60% - 2vmin);
-    object-fit: cover;
-    object-position: center;
+    background-image: url("./images/ConveyorD.gif");
+    background-size: 19vmin;
 }
 @keyframes boxes{
     0% {left: 10%;}
     50%{left: 75%; top:50%}
-    69% {left: 75%; top: 120%;opacity: 100%;}
-    70% {left: 75%; top: 120%;opacity: 0%;}
-    79% {left: 10%; top: -20%;opacity: 0%;}
-    80% {left: 10%; top: -20%;opacity: 100%;}
+    69% {left: 75%; top: 120%;visibility: visible;}
+    70% {left: 75%; top: 120%;visibility: hidden;}
+    79% {left: 10%; top: -20%;visibility: hidden;}
+    80% {left: 10%; top: -20%;visibility: visible;}
     100% {left: 10%; top: 50%;}
+}
+#lid{
+    animation-name: open;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes open{
+    0% {left: 0%;}
+    99% {left: 100%;}
+    100% {left: 100%;visibility: hidden;}
 }
 #profilePic{
     border: 1.5vmin white solid;
@@ -85,6 +118,11 @@ body{
     width: 20vmin;
     object-fit: cover;
     border-radius: 50%;
-    float: right;
-
+    position: absolute;
+    bottom: calc(95% - 23vmin);
+    right: 2vw;
+}
+@font-face {
+    font-family: "Pixel";
+    src: url("./images/big-shot.ttf");
 }
