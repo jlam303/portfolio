@@ -1,24 +1,57 @@
-body{
+.body{
     margin: 0%;
     padding: 0%;
     overflow: hidden;
     background-image: url(./images/Tile.png);
     background-size: 8vmin;
 }
+#project{
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+    background-image: url(./images/TileW.png);
+    background-size: 16vmin;
+}
+#background{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./images/TileW.png);
+    background-size: 16vmin;
+    z-index: -1;
+}
 #name{
     text-align: center;
-    position: sticky;
-    top: 0%;
     font-size: 5vmin;
-    color: springgreen;
+    color: white;
+    text-shadow: .5vmin .5vmin black;
+    font-family: Pixel;
+}
+#header{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 5vh;
+    font-size: 5vmin;
+    color: white;
+    text-shadow: .5vmin .5vmin black;
     font-family: Pixel;
 }
 .links{
     font-size: 2.3vmin;
     padding: 4.5vmin 1.5vmin 4.5vmin 1.5vmin;
     text-decoration: none;
-    color: springgreen;
+    color: white;
+    text-shadow: .3vmin .3vmin black;
     font-family: Pixel;
+}
+#home{
+    position: absolute;
+    top: 10vmin;
+    left: 10vmin;
+}
+#home > img{
+    width: 10vmin;
+    height: 10vmin;
 }
 #about{
     padding: 2.8vmin 2.5vmin 2.8vmin 2.5vmin;
@@ -106,6 +139,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 200;
 }
 @keyframes open{
     0% {left: 0%;}
@@ -125,4 +159,109 @@ body{
 @font-face {
     font-family: "Pixel";
     src: url("./images/big-shot.ttf");
+}
+#icons{
+    width: 73.5vmin;
+    height: 33.5vmin;
+}
+#container1{
+    height: 60vmin;
+    width: 90vw;
+    position: absolute;
+    top: calc(50% - 30vmin);
+    left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "skills"
+    "skillsD"
+    "info"
+    ;
+}
+#container1 > div{
+    font-size: 3vmin;
+    color: white;
+    text-shadow: .3vmin .3vmin black;
+    font-family: Pixel;
+    text-align: center;
+}
+#info{
+    grid-area: info;
+}
+#skills{
+    grid-area: skills;
+}
+#skillsD{
+    grid-area: skillsD;
+}
+#container2{
+    margin-top: 10vmin;
+    gap: 6vmin;
+    height: 60vmin;
+    width: 90vw;
+    position: absolute;
+    top: calc(50% - 30vh);
+    left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "work1"
+    "work2"
+    "work3"
+    ;
+
+}
+#container2> div > img{
+    height: 100%;
+    width: 100%;
+    border: 1vmin solid white;
+    border-radius: 10%;
+}
+#container2> div > img:hover{
+   
+}
+#work1{
+    grid-area: work1;
+}
+#work2{
+    grid-area: work2;
+}
+#work3{
+    grid-area: work3;
+}
+#container3{
+    margin-top: 10vmin;
+    gap: 6vmin;
+    height: 60vmin;
+    width: 90vw;
+    position: absolute;
+    top: calc(50% - 30vh);
+    left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "link1"
+    "link2"
+    "link3"
+    ;
+
+}
+#container3> a > img{
+    height: 20vmin;
+    width: 20vmin;
+    position: relative;
+    left: calc(50% - 10vw);
+    padding-top: 25%;
+}
+#link1{
+    grid-area: link1;
+}
+#link2{
+    grid-area: link2;
+}
+#link3{
+    grid-area: link3;
 }
