@@ -214,13 +214,11 @@
 
 }
 #container2> div > img{
-    height: 100%;
-    width: 100%;
+    height: 60vw;
+    width: 90vw;
     border: 1vmin solid white;
+    object-fit: cover;
     border-radius: 10%;
-}
-#container2> div > img:hover{
-   
 }
 #work1{
     grid-area: work1;
@@ -250,11 +248,17 @@
 
 }
 #container3> a > img{
-    height: 20vmin;
-    width: 20vmin;
+    height: 20vw;
+    width: 20vw;
     position: relative;
-    left: calc(50% - 10vw);
-    padding-top: 25%;
+    padding: 20vw 35vw 20vw 35vw;
+    background-color: black;
+    opacity: 0;
+    border-radius: 10%;
+    border: 1vmin solid white;
+}
+#container3>a>img:hover {
+    opacity: .7;
 }
 #link1{
     grid-area: link1;
@@ -264,4 +268,59 @@
 }
 #link3{
     grid-area: link3;
+}
+#container4 {
+    height: 60vmin;
+    width: 90vw;
+    position: absolute;
+    top: calc(50% - 30vmin);
+    left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "eIcon"
+        "email"
+        "pIcon"
+        "phone"
+        "gIcon"
+        "git"
+    ;
+}
+#eIcon{
+    grid-area: eIcon;
+}
+#email {
+    grid-area: email;
+}
+#pIcon {
+    grid-area: pIcon;
+}
+#phone {
+    grid-area: phone;
+}
+#gIcon{
+    grid-area: gIcon;
+}
+#git{
+    grid-area: git;
+}
+#container4>div {
+    font-size: 3vmin;
+    color: white;
+    text-shadow: .3vmin .3vmin black;
+    font-family: Pixel;
+    text-align: center;
+}
+#container4>div>img {
+   width: 13vw;
+   height: 10vw;
+}
+#gitLink{
+    text-decoration: none;
+    color: white;
+}
+#gitLink:hover {
+    text-decoration: underline;
+
 }
