@@ -1,5 +1,5 @@
 let beltOn = true;
-
+//created function to stop conveyor belt on main page
 function pauseBelt(){
     if(beltOn == true) 
     {
